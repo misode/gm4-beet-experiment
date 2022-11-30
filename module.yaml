@@ -1,5 +1,7 @@
-extend: common.yaml
-
-pipeline:
-  - data_pack:
-      load: 'base'
+data_pack:
+  name: "{{ project_id }}_1.19"
+  description:
+    - "{{ project_name }}"
+    - "\n"
+    - text: "Gamemode 4 for 1.19"
+      color": "#4AA0C7"
