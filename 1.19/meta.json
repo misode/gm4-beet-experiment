@@ -1,5 +1,5 @@
 {
-  "last_commit": "066ea9a19412617ea53ebda5e8341b565d2d7d41",
+  "last_commit": "9734afbb61c9628645b8aab2f9c8ea4016ce48c3",
   "modules": [
     {
       "id": "gm4_bat_grenades",
@@ -67,5 +67,180 @@
       "patch": 19001
     }
   ],
-  "contributors": []
+  "contributors": {
+    "15Redstones": {
+      "name": "15Redstones",
+      "links": [
+        "https://twitter.com/15Redstones"
+      ]
+    },
+    "Andante": {
+      "name": "Andante",
+      "links": [
+        "https://twitter.com/andantett"
+      ]
+    },
+    "Bloo": {
+      "name": "Bloo",
+      "links": [
+        "https://twitter.com/Bloo_dev"
+      ]
+    },
+    "BluePsychoRanger": {
+      "name": "BluePsychoRanger",
+      "links": [
+        "https://twitter.com/BluPsychoRanger"
+      ]
+    },
+    "Bunnygamers": {
+      "name": "Bunnygamers",
+      "links": [
+        "https://twitter.com/BunnygamersMC"
+      ]
+    },
+    "Chopper2112": {
+      "name": "Chopper2112",
+      "links": [
+        "https://twitter.com/TheChopper2112"
+      ]
+    },
+    "Denniss": {
+      "name": "Denniss",
+      "links": [
+        "https://twitter.com/Dennis2p_"
+      ]
+    },
+    "DuckJr": {
+      "name": "DuckJr",
+      "links": [
+        "https://twitter.com/DuckJr94"
+      ]
+    },
+    "Energyxxer": {
+      "name": "Energyxxer",
+      "links": [
+        "https://youtube.com/user/Energyxxer"
+      ]
+    },
+    "Fyid": {
+      "name": "Fyid",
+      "links": [
+        "https://twitter.com/FyidRants"
+      ]
+    },
+    "JP12": {
+      "name": "JP12",
+      "links": [
+        "https://github.com/jpeterik12"
+      ]
+    },
+    "Kroppeb": {
+      "name": "Kroppeb",
+      "links": [
+        "https://twitter.com/kroppeb"
+      ]
+    },
+    "Kruthers": {
+      "name": "Kruthers",
+      "links": [
+        "https://twitter.com/Pandakruthers"
+      ]
+    },
+    "kyrkis": {
+      "name": "kyrkis",
+      "links": [
+        "http://discordapp.com/users/287287322360414218"
+      ]
+    },
+    "Lue": {
+      "name": "Lue",
+      "links": [
+        "https://github.com/Luexa"
+      ]
+    },
+    "MichaelMiner137": {
+      "name": "MichaelMiner137",
+      "links": [
+        "https://linktr.ee/MichaelMiner137"
+      ]
+    },
+    "Misode": {
+      "name": "Misode",
+      "links": [
+        "https://twitter.com/misode_"
+      ]
+    },
+    "Memo": {
+      "name": "Memo",
+      "links": [
+        "https://linktr.ee/miraku_memo"
+      ]
+    },
+    "Nik3141": {
+      "name": "Nik3141",
+      "links": [
+        "https://youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"
+      ]
+    },
+    "Scommander": {
+      "name": "Scommander",
+      "links": [
+        "https://github.com/Scommander"
+      ]
+    },
+    "SethBling": {
+      "name": "SethBling",
+      "links": [
+        "https://youtube.com/user/SethBling"
+      ]
+    },
+    "SiberianHat": {
+      "name": "SiberianHat",
+      "links": [
+        "https://twitter.com/SiberianHat"
+      ]
+    },
+    "SirSheepe": {
+      "name": "SirSheepe",
+      "links": [
+        "https://twitter.com/SirSheepe"
+      ]
+    },
+    "Sparks": {
+      "name": "Sparks",
+      "links": [
+        "https://twitter.com/SparksTheGamer"
+      ]
+    },
+    "SpecialBuilder32": {
+      "name": "SpecialBuilder32",
+      "links": [
+        "https://twitter.com/SpecialBuilder"
+      ]
+    },
+    "Thanathor": {
+      "name": "Thanathor",
+      "links": [
+        "https://twitter.com/The_Thanathor"
+      ]
+    },
+    "The8BitMonkey": {
+      "name": "The8BitMonkey",
+      "links": [
+        "https://youtube.com/the8bitmonkey"
+      ]
+    },
+    "torbray": {
+      "name": "torbray",
+      "links": [
+        "https://twitter.com/torbray00"
+      ]
+    },
+    "Wumpacraft": {
+      "name": "Wumpacraft",
+      "links": [
+        "https://twitter.com/wumpacraft"
+      ]
+    }
+  }
 }
