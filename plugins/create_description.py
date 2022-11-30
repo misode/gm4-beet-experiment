@@ -11,4 +11,3 @@ def beet_default(ctx: Context):
 			"color": "#4AA0C7"
 		}
 	]
-	print("Set name and description", ctx.data)

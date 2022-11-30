@@ -1,4 +1,2 @@
-extend: '../common.yaml'
-
 data_pack:
   load: .

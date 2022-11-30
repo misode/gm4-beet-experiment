@@ -1,5 +1,3 @@
-extend: '../library.yaml'
-
 id: gm4_forceload
 name: Gamemode 4 Forceload
 

@@ -4,11 +4,10 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     pipeline:
+      - plugins.populate_credits
       - plugins.create_description
       - plugins.output_release
 
 meta:
-  gm4_manifest:
-    save_directory: release
   autosave:
     link: false
