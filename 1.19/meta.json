@@ -1,0 +1,71 @@
+{
+  "last_commit": "066ea9a19412617ea53ebda5e8341b565d2d7d41",
+  "modules": [
+    {
+      "id": "gm4_bat_grenades",
+      "name": "Bat Grenades",
+      "description": "Tired of the uselessness of bats? This module will turn them into tiny furry flying balls of boom!",
+      "recommended": [
+        "gm4_enderman_support_class",
+        "gm4_metallurgy"
+      ],
+      "notes": [
+        "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table."
+      ],
+      "video": "https://www.youtube.com/watch?v=uUoEKtte1GQ",
+      "wiki": "https://wiki.gm4.co/wiki/Bat_Grenades",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "patch": 19001
+    },
+    {
+      "id": "gm4_disassemblers",
+      "name": "Disassemblers",
+      "description": "Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!",
+      "recommended": [
+        "gm4_resource_pack",
+        "gm4_relocators",
+        "gm4_standard_crafting",
+        "gm4_auto_crafting",
+        "gm4_record_crafting",
+        "gm4_ender_hoppers",
+        "gm4_enchantment_extractors",
+        "gm4_forming_press",
+        "gm4_block_compressors",
+        "gm4_tunnel_bores",
+        "gm4_boots_of_ostara",
+        "gm4_heart_canisters",
+        "gm4_smelteries",
+        "gm4_liquid_tanks"
+      ],
+      "notes": [
+        "Modifies the bat loot table. May cause incompatibilities with Datapacks that also modify this loot table."
+      ],
+      "video": null,
+      "wiki": "https://wiki.gm4.co/wiki/Disassemblers",
+      "credits": {
+        "Creator": [
+          "Sparks"
+        ],
+        "Updated by": [
+          "Federick90",
+          "BluePsychoRanger"
+        ],
+        "Textures by": [
+          "kyrkis"
+        ],
+        "Icon Design": [
+          "Sparks"
+        ]
+      },
+      "patch": 19001
+    }
+  ],
+  "contributors": []
+}
