@@ -3,4 +3,6 @@ pipeline:
   - plugins.create_manifest
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
-    output: '../out'
+    pipeline:
+      - plugins.create_description
+      - plugins.output

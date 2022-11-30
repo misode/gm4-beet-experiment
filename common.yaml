@@ -1,3 +1,2 @@
 pipeline:
-  - plugins.create_description
   - plugins.populate_credits

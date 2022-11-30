@@ -3,7 +3,6 @@ import os
 
 def beet_default(ctx: Context):
 	version = os.getenv("VERSION", "1.19")
-	ctx.data.name = f"{ctx.project_id}_{version}"
 	ctx.data.description = [
 		ctx.project_name,
 		"\n",
