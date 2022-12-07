@@ -220,7 +220,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "smithed-libraries"
-version = "0.1.0"
+version = "0.1.4"
 description = "All of the Smithed Libraries"
 category = "main"
 optional = false
@@ -268,7 +268,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "38b2a68afb716caabd802ccc11ee6cdb162977188bfb239dd824eae65897e1b2"
+content-hash = "d57b5ddd3415f324116ee3b580dba8ddcaca142330bce8463321769a30f36524"
 
 [metadata.files]
 beet = []
