@@ -12,7 +12,6 @@ def beet_default(ctx: Context):
 	)
 
 	os.makedirs(base_path, exist_ok=True)
-	print(ctx.data.extra)
 	for file in ["README.md", "CREDITS.md", "pack.png"]:
 		if file in ctx.data.extra:
 			ctx.data.extra[file].dump(base_path, file)
