@@ -17,10 +17,17 @@ def dev(modules: tuple[str], reload: bool, link: str | None):
 		return
 	click.echo(f"Building modules: {', '.join(modules)}")
 
-	args = ["beet"]
+	args = ["beet", "-p", "beet-dev.yaml"]
 
-	args.extend(["--set", f"pipeline[0].broadcast = {json.dumps(modules)}"])
-	args.extend(["--set", "meta.autosave.link = false"])
+	config = {
+		"broadcast": modules,
+		"extend": "beet.yaml",
+		"pipeline": [
+			"plugins.create_description"
+		]
+	}
+
+	args.extend(["--set", f"pipeline[] = {json.dumps(config)}"])
 
 	args.append("watch")
 
