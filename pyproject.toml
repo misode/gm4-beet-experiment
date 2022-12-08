@@ -17,10 +17,6 @@ smithed-libraries = "^0.1.0"
 black = "^22.6.0"
 isort = "^5.10.1"
 
-
-[tool.poetry.scripts]
-gm4 = "gm4:main"
-
 [tool.poetry.plugins.beet]
 commands = "gm4"
 

@@ -1,22 +1,17 @@
 import click
+import json
 import subprocess
-# from beet import Project
-# from beet.toolchain.cli import beet
+from beet.toolchain.cli import beet
 from contextlib import suppress
 
-@click.group()
-def main():
-	pass
-
-# pass_project = click.make_pass_decorator(Project) # type: ignore
-
-@main.command()
-# @beet.command()
-# @pass_project
+@beet.command()
 @click.argument("modules", nargs=-1)
 @click.option("-r", "--reload", is_flag=True, help="Enable live data pack reloading.")
 @click.option("-l", "--link", metavar="WORLD", help="Link the project before watching.")
 def dev(modules: tuple[str], reload: bool, link: str | None):
+	"""Watch modules for development."""
+
+	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
 	if len(modules) == 0:
 		click.echo("You need at least one module")
 		return
@@ -24,8 +19,7 @@ def dev(modules: tuple[str], reload: bool, link: str | None):
 
 	args = ["beet"]
 
-	broadcast = ", ".join([f"\"gm4_{m}\"" for m in modules])
-	args.extend(["--set", f"pipeline[0].broadcast = [{broadcast}]"])
+	args.extend(["--set", f"pipeline[0].broadcast = {json.dumps(modules)}"])
 	args.extend(["--set", "meta.autosave.link = false"])
 
 	args.append("watch")
@@ -38,7 +32,3 @@ def dev(modules: tuple[str], reload: bool, link: str | None):
 
 	with suppress(KeyboardInterrupt):
 		subprocess.run(args)
-
-
-if __name__ == "__main__":
-	main()
