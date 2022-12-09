@@ -69,14 +69,14 @@ jobs:
 
       - name: Build modules from pull request
         if: github.event_name == 'pull_request'
-        run: poetry run beet -p beet-release.yaml --set 'meta.pull_request_base=origin/${{ github.base_ref }}' build
+        run: poetry run beet -p beet-release.yaml build
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v2
         with:
           name: 'Modules for pull request #${{ github.event.number }}'
-          path: ${{ github.workspace }}/release/{{ env.VERSION }}/
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Commit release
         if: github.event_name != 'pull_request'

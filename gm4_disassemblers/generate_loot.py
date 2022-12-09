@@ -5,7 +5,7 @@ def beet_default(ctx: Context):
 	ctx.generate("disassembly", LootTable({
 		"pools": [
 			{
-				"rolls": 3,
+				"rolls": 4,
 				"entries": []
 			}
 		]
