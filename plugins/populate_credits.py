@@ -1,11 +1,9 @@
 from beet import Context, TextFile
-from typing import Any
-
 
 def beet_default(ctx: Context):
 	manifest = ctx.cache["gm4_manifest"].json
-	contributors: dict[str, Any] = manifest.get("contributors", {})
-	credits = next((m["credits"] for m in manifest.get("modules", []) if m["id"] == ctx.project_id), {})
+	contributors = manifest.get("contributors", {})
+	credits: dict[str, list[str]] = next((m["credits"] for m in manifest.get("modules", []) if m["id"] == ctx.project_id), {})
 	if credits is None or len(credits) == 0:
 		return
 
@@ -18,8 +16,8 @@ def beet_default(ctx: Context):
 		for p in people:
 			contributor = contributors.get(p, { "name": p })
 			name = contributor.get("name", p)
-			links = contributor.get("links", [])
-			if len(links) >= 1:
+			links: list[str] | str = contributor.get("links", [])
+			if isinstance(links, list) and len(links) >= 1:
 				text += f"- [{name}]({links[0]})\n"
 			else:
 				text += f"- {name}\n"

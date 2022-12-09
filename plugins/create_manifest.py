@@ -57,6 +57,7 @@ def beet_default(ctx: Context):
 		else:
 			patch = released["patch"] if released else prefix
 			module["patch"] = patch + 1
+			print(f"[GM4] Updating {id} to {patch + 1}")
 	
 	try:
 		with open("contributors.json", "r") as f:
@@ -76,4 +77,3 @@ def beet_default(ctx: Context):
 	with open(f'release/{version}/meta.json', 'w') as f:
 		json.dump(new_manifest, f, indent=2)
 		f.write('\n')
-	

@@ -4,6 +4,7 @@ pipeline:
   - broadcast: 'gm4_*'
     extend: 'beet.yaml'
     pipeline:
+      - plugins.populate_updates
       - plugins.populate_credits
       - plugins.create_description
       - plugins.output_release
