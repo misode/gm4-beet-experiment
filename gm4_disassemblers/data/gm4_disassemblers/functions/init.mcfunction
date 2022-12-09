@@ -1,0 +1,3 @@
+say Installing disassemblers...
+
+#$moduleUpdateList
