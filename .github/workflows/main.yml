@@ -73,7 +73,7 @@ jobs:
 
       - name: List files...
         run: |
-          ls ${{ github.workspace }}/release/{{ env.VERSION }}/
+          ls ${{ github.workspace }}/release/${{ env.VERSION }}/
           echo ---
           ls ${{ github.workspace }}/release/
           echo ---
@@ -81,14 +81,14 @@ jobs:
           echo ---
           ls release/
           echo ---
-          ls release/{{ env.VERSION }}/
+          ls release/${{ env.VERSION }}/
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v2
         with:
           name: 'Modules for pull request #${{ github.event.number }}'
-          path: ${{ github.workspace }}/release/{{ env.VERSION }}/
+          path: ${{ github.workspace }}/release/${{ env.VERSION }}/
 
       - name: Commit release
         if: github.event_name != 'pull_request'
