@@ -1,5 +1,5 @@
 {
-  "last_commit": "a1934dd44ce01eaef2846fb323419b15a91c71dc",
+  "last_commit": "1dd8d93c3e93dea08e7b22a7d72fdc7b2acd8619",
   "modules": [
     {
       "id": "gm4_bat_grenades",
@@ -64,7 +64,7 @@
           "Sparks"
         ]
       },
-      "patch": 19003
+      "patch": 19004
     }
   ],
   "contributors": {
