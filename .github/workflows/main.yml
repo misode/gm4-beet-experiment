@@ -69,7 +69,7 @@ jobs:
 
       - name: Build modules from pull request
         if: github.event_name == 'pull_request'
-        run: poetry run beet -p beet-release.yaml --set 'meta.pull_request_base=origin/${{ github.base_ref }}' build
+        run: poetry run beet -p beet-release.yaml build
 
       - name: List files...
         run: |

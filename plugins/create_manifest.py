@@ -13,7 +13,6 @@ def run(cmd: list[str]) -> str:
 def beet_default(ctx: Context):
 	version = os.getenv("VERSION", "1.19")
 	prefix = int(os.getenv("PATCH_PREFIX", 0))
-	pr_base = ctx.meta.get('pull_request_base', None)
 
 	modules: list[dict[str, Any]] = [{"id": p.name} for p in sorted(ctx.directory.glob("gm4_*"))]
 
@@ -37,7 +36,7 @@ def beet_default(ctx: Context):
 			"contributors": [],
 		}
 
-	last_commit = manifest["last_commit"] if pr_base is None else pr_base
+	last_commit = manifest["last_commit"]
 	released_modules: list[dict[str, Any]] = manifest["modules"]
 
 	for module in modules:
@@ -47,10 +46,6 @@ def beet_default(ctx: Context):
 
 		diff = run(["git", "diff", last_commit, "--shortstat", "--", id]) if last_commit else True
 		released = next((m for m in released_modules if m["id"] == id), None)
-
-		if not diff and pr_base is not None:
-			module["id"] = None
-			continue
 
 		if not diff and released:
 			module["patch"] = released["patch"]
