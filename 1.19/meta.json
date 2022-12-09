@@ -1,5 +1,5 @@
 {
-  "last_commit": "5718ba45f913952f508d8c584adf5241abf4ef17",
+  "last_commit": "1a7d49821c5e9045106e119165616e98064c27bd",
   "modules": [
     {
       "id": "gm4_bat_grenades",
@@ -22,7 +22,7 @@
           "Sparks"
         ]
       },
-      "patch": 19001
+      "patch": 19002
     },
     {
       "id": "gm4_disassemblers",
