@@ -71,18 +71,6 @@ jobs:
         if: github.event_name == 'pull_request'
         run: poetry run beet -p beet-release.yaml build
 
-      - name: List files...
-        run: |
-          ls ${{ github.workspace }}/release/${{ env.VERSION }}/
-          echo ---
-          ls ${{ github.workspace }}/release/
-          echo ---
-          ls ${{ github.workspace }}/
-          echo ---
-          ls release/
-          echo ---
-          ls release/${{ env.VERSION }}/
-
       - name: Upload artifact
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v2
