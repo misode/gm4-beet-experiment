@@ -1,24 +1,27 @@
 import click
 import json
-import subprocess
+from beet import Project
 from beet.toolchain.cli import beet
-from contextlib import suppress
+from beet.toolchain.commands import watch
+
+pass_project = click.make_pass_decorator(Project) # type: ignore
 
 @beet.command()
+@pass_project
+@click.pass_context
 @click.argument("modules", nargs=-1)
 @click.option("-r", "--reload", is_flag=True, help="Enable live data pack reloading.")
 @click.option("-l", "--link", metavar="WORLD", help="Link the project before watching.")
-def dev(modules: tuple[str], reload: bool, link: str | None):
+def dev(ctx: click.Context, project: Project, modules: tuple[str], reload: bool, link: str | None):
 	"""Watch modules for development."""
 
 	modules = tuple(m if m.startswith("gm4_") else f"gm4_{m}" for m in modules)
 	if len(modules) == 0:
-		click.echo("You need at least one module")
+		click.echo("[GM4] You need at least one module")
 		return
-	click.echo(f"Building modules: {', '.join(modules)}")
+	click.echo(f"[GM4] Building modules: {', '.join(modules)}")
 
-	args = ["beet", "-p", "beet-dev.yaml"]
-
+	project.config_path = "beet-dev.yaml"
 	config = {
 		"broadcast": modules,
 		"extend": "beet.yaml",
@@ -26,16 +29,5 @@ def dev(modules: tuple[str], reload: bool, link: str | None):
 			"plugins.create_description"
 		]
 	}
-
-	args.extend(["--set", f"pipeline[] = {json.dumps(config)}"])
-
-	args.append("watch")
-
-	if reload:
-		args.append("--reload")
-
-	if link:
-		args.extend(["--link", link])
-
-	with suppress(KeyboardInterrupt):
-		subprocess.run(args)
+	project.config_overrides = [f"pipeline[] = {json.dumps(config)}"]
+	ctx.invoke(watch, reload=reload, link=link)
