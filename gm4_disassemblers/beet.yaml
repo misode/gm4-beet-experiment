@@ -2,6 +2,7 @@ extend: '../module.yaml'
 
 id: gm4_disassemblers
 name: Disassemblers
+version: '1.3.8'
 
 data_pack:
   load: .
@@ -12,6 +13,8 @@ pipeline:
       load: '../lib_forceload'
 
 meta:
+  modrinth:
+    project_id: itk6Zfe2
   gm4:
     description: Break apart gold and iron tools and weapons for materials. Attach this to a mobfarm to finally make use of those extra armour sets!
     recommended:
