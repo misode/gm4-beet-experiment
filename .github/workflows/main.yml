@@ -68,12 +68,12 @@ jobs:
       - name: Build all modules
         if: github.event_name != 'pull_request'
         run: poetry run beet -p beet-release.yaml build
+        env:
+          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
       - name: Build modules from pull request
         if: github.event_name == 'pull_request'
         run: poetry run beet -p beet-release.yaml build
-        env:
-          BEET_MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
       - name: Upload artifact
         if: github.event_name == 'pull_request'
